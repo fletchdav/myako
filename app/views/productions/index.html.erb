@@ -3,7 +3,7 @@
   <%= label.title %>
   <% label.productions.each do |production| %>
     <ul>
-      <li><%= production.title %></li>
+      <li> <%=link_to production.title, production_path(production) %> </li>
     </ul>
   <% end %>
 <% end %>
