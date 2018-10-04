@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181004123229) do
+ActiveRecord::Schema.define(version: 20181004125601) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "labels", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "productions", force: :cascade do |t|
     t.string "title"
@@ -22,6 +28,8 @@ ActiveRecord::Schema.define(version: 20181004123229) do
     t.string "video"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "label_id"
+    t.index ["label_id"], name: "index_productions_on_label_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -36,4 +44,5 @@ ActiveRecord::Schema.define(version: 20181004123229) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "productions", "labels"
 end

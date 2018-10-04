@@ -1,1 +1,9 @@
-<h1>yo</h1>
+<h1>Productions de Myako</h1>
+<% @labels.each do |label| %>
+  <%= label.title %>
+  <% label.productions.each do |production| %>
+    <ul>
+      <li><%= production.title %></li>
+    </ul>
+  <% end %>
+<% end %>
