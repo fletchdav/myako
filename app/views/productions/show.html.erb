@@ -1,4 +1,5 @@
 <%= @production.title  %>
+<%= cl_image_tag @production.photo, height: 300, width: 400, crop: :fill %>
 
 <%= link_to "modifier", edit_production_path(@production) %>
 <%= link_to "retour à la liste", productions_path %>
