@@ -1,7 +1,9 @@
-<%= form_for(production) do |f| %>
+<%= simple_form_for(production) do |f| %>
   <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control' %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
   </div>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>

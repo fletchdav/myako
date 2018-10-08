@@ -21,7 +21,7 @@ class ProductionsController < ApplicationController
   private
 
   def production_params
-    params.require(:production).permit(:title)
+    params.require(:production).permit(:title, :photo)
   end
 
   def set_production
