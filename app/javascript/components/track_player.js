@@ -1,7 +1,22 @@
 const buttons = document.querySelectorAll('.track');
+const playerProgress = document.querySelector('.player_progress');
+const playerCursor = document.querySelector('.player_cursor');
+var audio;
+
+function handleProgress() {
+  const percent = (audio.currentTime / audio.duration) * 100;
+  playerCursor.style.left = `${percent}%`;
+}
+
+function scrub(e) {
+  const scrubTime = (e.offsetX / playerProgress.offsetWidth) * audio.duration;
+  audio.currentTime = scrubTime;
+  console.log(e);
+}
 
 const toggle = () => {
-  const audio = event.currentTarget.querySelector('.audio')
+  audio = event.currentTarget.querySelector('.audio')
+  audio.addEventListener('timeupdate', handleProgress);
   if (audio.paused) {
     if (audio.currentTime == 0) {
       const audios = document.querySelectorAll('.audio');
@@ -27,3 +42,6 @@ function play() {
 }
 
 export { play };
+
+
+playerProgress.addEventListener('click', scrub);
