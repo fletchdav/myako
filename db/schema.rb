@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181008135455) do
+ActiveRecord::Schema.define(version: 20181009134210) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,18 @@ ActiveRecord::Schema.define(version: 20181008135455) do
     t.index ["label_id"], name: "index_productions_on_label_id"
   end
 
+  create_table "tracks", force: :cascade do |t|
+    t.text "title"
+    t.integer "position"
+    t.integer "min"
+    t.integer "sec"
+    t.bigint "production_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "url"
+    t.index ["production_id"], name: "index_tracks_on_production_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -72,4 +84,5 @@ ActiveRecord::Schema.define(version: 20181008135455) do
   end
 
   add_foreign_key "productions", "labels"
+  add_foreign_key "tracks", "productions"
 end
