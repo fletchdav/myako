@@ -1,0 +1,42 @@
+<div class="content">
+
+  <!-- partie de gauche : liste des labels -->
+  <div class="left">
+    <div class="labels_list">
+      <% @labels.each do |label| %>
+        <li> <%= label.title %> </li>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- partie de droite : détail des labels  -->
+  <div class="right">
+    <% @labels.each do |label| %>
+      <div class="label_content">
+
+      <!-- détail par production -->
+        <% label.productions.each do |production| %>
+          <div class="production_content">
+            <div class="production_photo">
+              <%= cl_image_tag production.photo, height: 300, width: 400, crop: :fill %>
+            </div>
+            <div class="production_details">
+              <div class="production_title">
+                <%= production.title  %>
+              </div>
+              <div class="production_tracks">
+              <% production.tracks.each do |track| %>
+                <li> <%= track.title %> </li>
+              <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>
