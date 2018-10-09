@@ -1,13 +1,23 @@
 <%= @production.title  %>
 <%= cl_image_tag @production.photo, height: 300, width: 400, crop: :fill %>
 
-<% if @production.player? %>
-  <audio src="<%= @production.player %>" controls controlsList="nodownload noremoteplayback"> </audio>
-<% end %>
-
-
-
-<!-- <audio src="https://res.cloudinary.com/dafwvtnmf/video/upload/ac_mp3,q_100/v1539024481/04_White_Tiger_Czech_Anthem_microGranny_Remix_bln58a.mp3" controls controlsList="nodownload noremoteplayback"> </audio> -->
 
 <%= link_to "modifier", edit_production_path(@production) %>
 <%= link_to "retour à la liste", productions_path %>
+
+<% if @production.player? %>
+
+<div class="player">
+    <audio class="audio" src="<%= @production.player %>"> </audio>
+  <div class="player_controls">
+    <div class="player_button">
+      play
+    </div>
+    <div class="player_progress">
+      <div class="player_cursor">
+      </div>
+    </div>
+  </div>
+</div>
+
+<% end %>

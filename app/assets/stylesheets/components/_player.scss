@@ -1,0 +1,31 @@
+.player {
+  display:flex;
+  width: 50%;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+.player_controls {
+  display: flex;
+  width: 100%;
+}
+
+.player_button {
+  flex: 1 1 auto;
+  margin-right: 1%;
+  cursor:pointer;
+}
+
+.player_progress {
+  background: black;
+  flex: 1 1 100%;
+  position: relative;
+  height: 100%;
+}
+
+.player_cursor {
+  background: white;
+  position: absolute;
+  left: 0%;
+  height: 100%;
+  width: 0.5%;
+}
