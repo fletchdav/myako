@@ -13,9 +13,9 @@
 // }
 
 // function updateButton() {
-//   const icon = this.paused ? 'play' : 'pause';
-//   console.log(icon);
-//   playerButton.textContent = icon;
+  // const icon = this.paused ? 'play' : 'pause';
+  // console.log(icon);
+  // playerButton.textContent = icon;
 // }
 
 // function toggleplay() {
