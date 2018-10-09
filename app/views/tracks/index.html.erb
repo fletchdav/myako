@@ -25,9 +25,12 @@
                 <%= production.title  %>
               </div>
               <div class="production_tracks">
-              <% production.tracks.each do |track| %>
-                <li> <%= track.title %> </li>
-              <% end %>
+                <% production.tracks.each do |track| %>
+                  <div class="track" id="<%= track.title %>">
+                    <%= track.title %>
+                    <audio class="audio" src="<%= track.url %>"> </audio>
+                  </div>
+                <% end %>
               </div>
             </div>
           </div>

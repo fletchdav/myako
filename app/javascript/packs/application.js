@@ -1,7 +1,7 @@
 import "bootstrap";
 
-import { test } from '../components/test';
-test();
+// import { audioPlayer } from '../components/player';
+// audioPlayer();
 
-import { audioPlayer } from '../components/player';
-audioPlayer();
+import { play } from '../components/track_player';
+play();
