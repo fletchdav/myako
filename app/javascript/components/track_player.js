@@ -87,10 +87,12 @@ function play() {
 playerProgress.addEventListener('click', scrub);
 playerButton.addEventListener('click', toggleButton);
 
+
+
 // next
 function next() {
   let audioToPlay;
-  let audioPlaying = document.querySelector('.running');
+  let audioPlaying = document.querySelector('.playing').querySelector('.audio');
   indexPlaying = trackList.indexOf(audioPlaying);
   audioPlaying.pause();
   audioPlaying.currentTime = 0;
@@ -107,13 +109,14 @@ function next() {
   audioToPlay.classList.add('running');
   audioToPlay.parentElement.classList.add('track_running');
   audioToPlay.addEventListener('timeupdate', handleProgress);
+  updateButton();
 }
 nextButton.addEventListener('click', next);
 
 // previous
 function previous() {
   let audioToPlay;
-  let audioPlaying = document.querySelector('.running');
+  let audioPlaying = document.querySelector('.playing').querySelector('.audio');
   indexPlaying = trackList.indexOf(audioPlaying);
   audioPlaying.pause();
   audioPlaying.currentTime = 0;
@@ -130,6 +133,7 @@ function previous() {
   audioToPlay.classList.add('running');
   audioToPlay.parentElement.classList.add('track_running');
   audioToPlay.addEventListener('timeupdate', handleProgress);
+  updateButton();
 }
 previousButton.addEventListener('click', previous);
 
