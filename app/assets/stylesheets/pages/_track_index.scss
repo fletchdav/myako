@@ -15,7 +15,8 @@
 }
 
 .right {
-  padding: 20px;
+  // padding: 20px;
+  margin-left: 20px;
 }
 
 // labels
@@ -34,8 +35,15 @@ color: white;
 }
 
 // production
+
+
 .production_content {
   display: flex;
+  margin-bottom: 20px;
+}
+
+.production_details {
+  padding-left: 20px;
 }
 
 .playing {
