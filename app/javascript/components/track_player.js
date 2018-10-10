@@ -1,11 +1,12 @@
+const controls = document.querySelector('.controls');
 const buttons = document.querySelectorAll('.track');
 const playerProgress = document.querySelector('.player_progress');
 const playerCursor = document.querySelector('.player_cursor');
 const playerButton =document.querySelector('#play');
 const nextButton =document.querySelector('#next');
 const previousButton =document.querySelector('#previous');
-let audio;
 const trackList = [];
+let audio;
 let indexPlaying = 0;
 document.querySelectorAll('.audio').forEach(audio => trackList.push(audio));
 
@@ -49,6 +50,7 @@ function toggleButton() {
 }
 
 const toggle = () => {
+  controls.style.display = "flex";
   audio = event.currentTarget.querySelector('.audio')
   audio.addEventListener('timeupdate', handleProgress);
   if (audio.paused) {
