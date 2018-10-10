@@ -5,7 +5,7 @@
   margin-left: 50px;
 }
 .player_controls {
-  display: flex;
+  display: none;
   width: 100%;
 }
 
@@ -20,10 +20,11 @@
   flex: 1 1 100%;
   position: relative;
   height: 100%;
+  margin: 10px;
 }
 
 .player_cursor {
-  background: white;
+  background: black;
   position: absolute;
   left: 0%;
   height: 100%;

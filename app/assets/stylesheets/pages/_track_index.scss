@@ -5,15 +5,32 @@
 
 .left {
   flex: 0 0 30%;
-  height: 80vh;
+  height: 85vh;
   position: sticky;
-  top: 0;
+  top: 15vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: black;
+}
+
+.right {
+  padding: 20px;
+}
+
+// labels
+.labels_list {
+  list-style: none;
+  background-color: black;
+  color: white;
 }
 
 // controls
 .controls {
 display: none;
 justify-content: space-around;
+background-color: black;
+color: white;
 }
 
 // production
