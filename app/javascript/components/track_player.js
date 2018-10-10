@@ -4,8 +4,10 @@ const playerCursor = document.querySelector('.player_cursor');
 const playerButton =document.querySelector('#play');
 const nextButton =document.querySelector('#next');
 const previousButton =document.querySelector('#previous');
-var audio;
-const trackList = document.querySelector('.audio');
+let audio;
+const trackList = [];
+let indexPlaying = 0;
+document.querySelectorAll('.audio').forEach(audio => trackList.push(audio));
 
 function handleProgress() {
   const percent = (audio.currentTime / audio.duration) * 100;
@@ -85,13 +87,51 @@ function play() {
 playerProgress.addEventListener('click', scrub);
 playerButton.addEventListener('click', toggleButton);
 
+// next
 function next() {
-  // trouver l'index de audio active dans tracklist
-  // index + 1
-  // jouer l'audio correspondante
+  let audioToPlay;
+  let audioPlaying = document.querySelector('.running');
+  indexPlaying = trackList.indexOf(audioPlaying);
+  audioPlaying.pause();
+  audioPlaying.currentTime = 0;
+  audioPlaying.classList.remove('running');
+  audioPlaying.parentElement.classList.remove('track_running');
+  audioPlaying.parentElement.classList.remove('playing');
+  if (indexPlaying == trackList.length - 1) {
+    audioToPlay = trackList[0];
+  } else {
+    audioToPlay = trackList[indexPlaying + 1];
+  }
+  audioToPlay.play();
+  audioToPlay.parentElement.classList.add('playing');
+  audioToPlay.classList.add('running');
+  audioToPlay.parentElement.classList.add('track_running');
+  audioToPlay.addEventListener('timeupdate', handleProgress);
 }
-
 nextButton.addEventListener('click', next);
+
+// previous
+function previous() {
+  let audioToPlay;
+  let audioPlaying = document.querySelector('.running');
+  indexPlaying = trackList.indexOf(audioPlaying);
+  audioPlaying.pause();
+  audioPlaying.currentTime = 0;
+  audioPlaying.classList.remove('running');
+  audioPlaying.parentElement.classList.remove('track_running');
+  audioPlaying.parentElement.classList.remove('playing');
+  if (indexPlaying == 0) {
+    audioToPlay = trackList[trackList.length - 1];
+  } else {
+    audioToPlay = trackList[indexPlaying - 1];
+  }
+  audioToPlay.play();
+  audioToPlay.parentElement.classList.add('playing');
+  audioToPlay.classList.add('running');
+  audioToPlay.parentElement.classList.add('track_running');
+  audioToPlay.addEventListener('timeupdate', handleProgress);
+}
+previousButton.addEventListener('click', previous);
 
 export { play };
 
