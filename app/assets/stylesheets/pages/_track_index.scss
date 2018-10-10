@@ -19,11 +19,25 @@
   margin-left: 20px;
 }
 
+// target repère les ancres qui ont un identifiant, before leur rajoute quelque chose au moment du clic
+:target::before {
+content:"";
+display:block;
+height:15vh; /* fixed header height*/
+margin:-15vh 0 0; /* negative fixed header height */
+}
+
 // labels
 .labels_list {
   list-style: none;
   background-color: black;
   color: white;
+  a {
+    color: white;
+  }
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 // controls
