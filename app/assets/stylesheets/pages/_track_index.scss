@@ -5,26 +5,72 @@
 
 .left {
   flex: 0 0 30%;
-  height: 80vh;
+  height: 85vh;
   position: sticky;
-  top: 0;
+  top: 15vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: black;
+}
+
+.right {
+  // padding: 20px;
+  margin-left: 20px;
+}
+
+// target repère les ancres qui ont un identifiant, before leur rajoute quelque chose au moment du clic
+:target::before {
+content:"";
+display:block;
+height:15vh; /* fixed header height*/
+margin:-15vh 0 0; /* negative fixed header height */
+}
+
+// labels
+.labels_list {
+  list-style: none;
+  background-color: black;
+  color: white;
+  a {
+    color: white;
+  }
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 // controls
 .controls {
-display: flex;
+display: none;
 justify-content: space-around;
+background-color: black;
+color: white;
 }
 
 // production
+
+
 .production_content {
   display: flex;
+  margin-bottom: 20px;
+}
+
+.production_title {
+  h3 {
+    margin-top: 0px;
+  }
+}
+
+.production_details {
+  padding-left: 20px;
 }
 
 .playing {
   font-weight: bolder;
+  color: gray;
 }
 
 .track_running {
-  color: red;
+  color: black;
 }

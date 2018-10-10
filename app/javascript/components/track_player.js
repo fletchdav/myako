@@ -1,16 +1,18 @@
+const controls = document.querySelector('.controls');
 const buttons = document.querySelectorAll('.track');
 const playerProgress = document.querySelector('.player_progress');
 const playerCursor = document.querySelector('.player_cursor');
 const playerButton =document.querySelector('#play');
 const nextButton =document.querySelector('#next');
 const previousButton =document.querySelector('#previous');
-let audio;
 const trackList = [];
+let audio;
 let indexPlaying = 0;
 document.querySelectorAll('.audio').forEach(audio => trackList.push(audio));
 
 function handleProgress() {
-  const percent = (audio.currentTime / audio.duration) * 100;
+  const audioPlaying = document.querySelector('.playing').querySelector('.audio');
+  const percent = (audioPlaying.currentTime / audioPlaying.duration) * 100;
   playerCursor.style.left = `${percent}%`;
 }
 
@@ -49,8 +51,9 @@ function toggleButton() {
 }
 
 const toggle = () => {
+  playerCursor.style.background = "white";
+  controls.style.display = "flex";
   audio = event.currentTarget.querySelector('.audio')
-  audio.addEventListener('timeupdate', handleProgress);
   if (audio.paused) {
     if (audio.currentTime == 0) {
       const audios = document.querySelectorAll('.audio');
@@ -75,7 +78,9 @@ const toggle = () => {
     audio.classList.remove('running');
     audio.parentElement.classList.remove('track_running');
   }
+  audio.addEventListener('timeupdate', handleProgress);
   updateButton();
+  autoNext();
 }
 
 function play() {
@@ -110,6 +115,7 @@ function next() {
   audioToPlay.parentElement.classList.add('track_running');
   audioToPlay.addEventListener('timeupdate', handleProgress);
   updateButton();
+  autoNext();
 }
 nextButton.addEventListener('click', next);
 
@@ -134,8 +140,14 @@ function previous() {
   audioToPlay.parentElement.classList.add('track_running');
   audioToPlay.addEventListener('timeupdate', handleProgress);
   updateButton();
+  autoNext();
 }
 previousButton.addEventListener('click', previous);
+
+function autoNext() {
+  let audioPlaying = document.querySelector('.playing').querySelector('.audio');
+  audioPlaying.addEventListener('ended', next);
+}
 
 export { play };
 
