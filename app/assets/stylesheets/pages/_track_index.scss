@@ -56,14 +56,21 @@ color: white;
   margin-bottom: 20px;
 }
 
+.production_title {
+  h3 {
+    margin-top: 0px;
+  }
+}
+
 .production_details {
   padding-left: 20px;
 }
 
 .playing {
   font-weight: bolder;
+  color: gray;
 }
 
 .track_running {
-  color: red;
+  color: black;
 }

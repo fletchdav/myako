@@ -32,8 +32,7 @@
             </div>
             <div class="production_details">
               <div class="production_title">
-                <%= production.title  %>
-                <%= production.label.title %>
+               <h3> <%= production.title  %> </h3>
               </div>
               <div class="production_tracks">
                 <% production.tracks.sort_by{ |track|track.position }.each do |track| %>
