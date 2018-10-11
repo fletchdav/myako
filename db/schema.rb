@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181010150755) do
+ActiveRecord::Schema.define(version: 20181011161311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,13 @@ ActiveRecord::Schema.define(version: 20181010150755) do
     t.integer "position"
   end
 
+  create_table "podcasts", force: :cascade do |t|
+    t.string "title"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "productions", force: :cascade do |t|
     t.string "title"
     t.string "text"
@@ -59,6 +66,13 @@ ActiveRecord::Schema.define(version: 20181010150755) do
     t.string "photo"
     t.integer "position"
     t.index ["label_id"], name: "index_productions_on_label_id"
+  end
+
+  create_table "radios", force: :cascade do |t|
+    t.string "title"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "tracks", force: :cascade do |t|
@@ -83,6 +97,14 @@ ActiveRecord::Schema.define(version: 20181010150755) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string "title"
+    t.text "text"
+    t.text "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "productions", "labels"
