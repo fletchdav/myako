@@ -19,8 +19,10 @@ function handleProgress() {
 function scrub(e) {
   if (document.querySelector('.playing')) {
     audio = document.querySelector('.playing').querySelector('audio')
-    const scrubTime = (e.offsetX / playerProgress.offsetWidth) * audio.duration;
-    audio.currentTime = scrubTime;
+    if (audio.duration !== Infinity) {
+      const scrubTime = (e.offsetX / playerProgress.offsetWidth) * audio.duration;
+      audio.currentTime = scrubTime;
+    }
   }
 }
 

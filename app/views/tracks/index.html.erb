@@ -25,10 +25,10 @@
       <div class="label_content">
 
       <!-- détail par production -->
-        <% label.productions.each do |production| %>
+        <% label.productions.sort_by{ |prod|prod.position }.each do |production| %>
           <div class="production_content">
             <div class="production_photo">
-              <%= cl_image_tag production.photo, height: 300, width: 400, crop: :fill %>
+              <%= cl_image_tag production.photo, height: 400, width: 400, crop: :fill %>
             </div>
             <div class="production_details">
               <div class="production_title">
