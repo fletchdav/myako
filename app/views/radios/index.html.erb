@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <% @radios.each do |radio| %>
+      <div class="col-md-4">
+        <div class="radio">
+          <div class="radio-title"> <%= radio.title %> </div>
+          <div class="radio-player"> <%= radio.url.html_safe %> </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

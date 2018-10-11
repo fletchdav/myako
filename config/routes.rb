@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :productions, only: [:index, :show, :edit, :update]
   resources :tracks, only: :index
+  resources :radios, only: :index
+  resources :podcasts, only: :index
+  resources :videos, only: :index
 end
