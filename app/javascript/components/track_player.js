@@ -53,6 +53,9 @@ function toggleButton() {
     audio.classList.add('running');
     audio.parentElement.classList.add('track_running');
     audio.parentElement.classList.add('playing');
+    updateButton();
+    playerCursor.style.background = "white";
+    audio.addEventListener('timeupdate', handleProgress);
   }
 }
 
