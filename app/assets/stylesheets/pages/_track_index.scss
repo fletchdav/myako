@@ -80,7 +80,6 @@ margin:-15vh 0 0; /* negative fixed header height */
     display: block;
   }
   .left {
-    border : 2px solid red;
     position: sticky;
     top: 15vh;
     display: flex;
@@ -95,7 +94,6 @@ margin:-15vh 0 0; /* negative fixed header height */
     display:none;
   }
   .controls {
-    border : 2px solid red;
     display: flex;
     justify-content: space-between;
     background-color: black;
