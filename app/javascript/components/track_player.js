@@ -89,10 +89,13 @@ function play() {
   buttons.forEach((button) => {
     button.addEventListener("click", toggle);
   });
+  playerProgress.addEventListener('click', scrub);
+  playerButton.addEventListener('click', toggleButton);
+  nextButton.addEventListener('click', next);
+  previousButton.addEventListener('click', previous);
 }
 
-playerProgress.addEventListener('click', scrub);
-playerButton.addEventListener('click', toggleButton);
+
 
 
 
@@ -119,7 +122,6 @@ function next() {
   updateButton();
   autoNext();
 }
-nextButton.addEventListener('click', next);
 
 // previous
 function previous() {
@@ -144,7 +146,6 @@ function previous() {
   updateButton();
   autoNext();
 }
-previousButton.addEventListener('click', previous);
 
 function autoNext() {
   let audioPlaying = document.querySelector('.playing').querySelector('.audio');

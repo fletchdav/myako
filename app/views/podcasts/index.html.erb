@@ -1,12 +1,1 @@
-<div class="container">
-  <div class="row">
-    <% @podcasts.each do |podcast| %>
-      <div class="col-md-4">
-        <div class="radio">
-          <div class="radio-title"> <%= podcast.title %> </div>
-          <div class="radio-player"> <%= podcast.url.html_safe %> </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
+<%= render 'shared/audio_media', medias: @podcasts %>

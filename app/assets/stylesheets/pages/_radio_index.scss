@@ -1,7 +1,30 @@
-.radio {
+.media {
   padding: 10px;
 }
 
-.radio-title {
+.media-title {
   margin-bottom: 5px;
+}
+
+.media-content {
+  display: flex;
+}
+
+.media-text {
+  flex: 0 1 50%;
+  margin-left: 20px;
+  text-align: justify;
+}
+
+.media-player {
+  flex: 1 1 auto;
+}
+
+@media(max-width: 1000px) {
+  .media-content {
+    display: block;
+  }
+  .media-text{
+    margin-left: 0px;
+  }
 }
