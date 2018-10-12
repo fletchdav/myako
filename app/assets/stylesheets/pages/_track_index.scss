@@ -42,7 +42,7 @@ margin:-15vh 0 0; /* negative fixed header height */
 
 // controls
 .controls {
-  display: none;
+  display: flex;
   justify-content: space-around;
   background-color: black;
   color: white;
