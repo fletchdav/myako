@@ -1,0 +1,11 @@
+<div class="container">
+    <% medias.each do |media| %>
+        <div class="media">
+          <div class="media-title"> <%= media.title %> </div>
+          <div class="media-content">
+            <div class="media-player"> <%= media.url.html_safe %> </div>
+            <div class="media-text"><%= simple_format(media.text) %></div>
+          </div>
+        </div>
+    <% end %>
+</div>

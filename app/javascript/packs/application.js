@@ -4,4 +4,11 @@ import "bootstrap";
 // audioPlayer();
 
 import { play } from '../components/track_player';
-play();
+if (document.querySelector('.track')) {
+  play();
+}
+
+
+
+import { mobilemenu } from '../components/mobilemenu';
+mobilemenu();
