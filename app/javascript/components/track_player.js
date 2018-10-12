@@ -48,7 +48,11 @@ function toggleButton() {
     audio.parentElement.classList.add('track_running');
     updateButton();
   } else {
-
+    audio = trackList[0];
+    audio.play();
+    audio.classList.add('running');
+    audio.parentElement.classList.add('track_running');
+    audio.parentElement.classList.add('playing');
   }
 }
 

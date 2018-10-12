@@ -93,6 +93,7 @@ margin:-15vh 0 0; /* negative fixed header height */
     display:none;
   }
   .controls {
+    display: flex;
     justify-content: space-evenly;
     background-color: black;
   }
