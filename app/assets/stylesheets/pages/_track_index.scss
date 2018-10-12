@@ -42,10 +42,10 @@ margin:-15vh 0 0; /* negative fixed header height */
 
 // controls
 .controls {
-display: none;
-justify-content: space-around;
-background-color: black;
-color: white;
+  display: none;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
 }
 
 // production
@@ -80,24 +80,25 @@ color: white;
     display: block;
   }
   .left {
-  position: sticky;
-  height: 20vh;
-  top: 15vh;
-  display: flex;
-  padding: 20px;
-  background-color: black;
-  margin-bottom: 30px;
-  border-bottom: solid white 10px;
+    position: sticky;
+    height: 20vh;
+    top: 15vh;
+    display: flex;
+    padding: 20px;
+    background-color: black;
+    margin-bottom: 30px;
+    border-bottom: solid white 10px;
   }
   .labels_list {
     display:none;
   }
   .controls {
-  justify-content: space-evenly;
+    justify-content: space-evenly;
+    background-color: black;
   }
   .production_content {
-  display: block;
-  margin-bottom: 50px;
+    display: block;
+    margin-bottom: 50px;
   }
   .title-photo {
     width: 100%;

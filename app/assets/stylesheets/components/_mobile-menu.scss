@@ -1,6 +1,10 @@
 .mobilemenu {
-  min-height: calc(100vh - 100px);
+  min-height: 85vh;
   width: 100vw;
+  position: sticky;
+  top: 15vh;
+  background-color: white;
+  z-index: 2;
 }
 
 .mobilemenu-list {
