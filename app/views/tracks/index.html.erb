@@ -31,14 +31,32 @@
             </div>
             <div class="production_details">
               <div class="production_title">
-               <h3> <%= production.title  %> </h3>
+               <h5> <%= production.title.upcase  %> </h5>
               </div>
               <div class="production_tracks">
                 <% production.tracks.sort_by{ |track|track.position }.each do |track| %>
                   <div class="track" id=<%= track.title %>>
-                    <%= track.title %>
+                    <p> <%= track.title %> </p>
                     <audio class="audio" src=<%= track.url %>> </audio>
                   </div>
+                <% end %>
+              </div>
+              <div class="production_texts">
+                <% if production.text != ("" && nil) %>
+                  <%= simple_format(production.text) %>
+                <% end %>
+                <% if production.release_type != ("" && nil) %>
+                 <p style = "margin-bottom:0px"> <%= production.release_type %> </p>
+                <% end %>
+                <p style = "margin-bottom:0px"> Label: <%= production.label.title %> </p>
+                <% if production.date != ("" && nil) %>
+                  <p > Date: <%= production.date %> </p>
+                <% end %>
+                <% if production.digital != ("" && nil) %>
+                  <%= link_to "> Digital", production.digital, target: :_blank %>
+                <% end %>
+                <% if production.vinyl != ("" && nil) %>
+                  <%= link_to "> Vinyle", production.vinyl, target: :_blank, class:"vinyl_link" %>
                 <% end %>
               </div>
             </div>

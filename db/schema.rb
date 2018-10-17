@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181012151012) do
+ActiveRecord::Schema.define(version: 20181017153420) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 20181012151012) do
 
   create_table "productions", force: :cascade do |t|
     t.string "title"
-    t.string "text"
+    t.text "text"
     t.string "player"
     t.string "video"
     t.datetime "created_at", null: false
@@ -66,6 +66,10 @@ ActiveRecord::Schema.define(version: 20181012151012) do
     t.bigint "label_id"
     t.string "photo"
     t.integer "position"
+    t.string "date"
+    t.string "vinyl"
+    t.string "digital"
+    t.string "release_type"
     t.index ["label_id"], name: "index_productions_on_label_id"
   end
 

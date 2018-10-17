@@ -11,6 +11,11 @@
   cursor:pointer;
 }
 
+#previous, #play, #next {
+  cursor: pointer;
+  font-size: $font-size-h5;
+}
+
 .player_progress {
   background: black;
   flex: 1 1 20%;
