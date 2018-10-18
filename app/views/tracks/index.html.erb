@@ -42,21 +42,21 @@
                 <% end %>
               </div>
               <div class="production_texts">
-                <% if production.text != ("" && nil) %>
+                <% unless production.text.blank? %>
                   <%= simple_format(production.text) %>
                 <% end %>
-                <% if production.release_type != ("" && nil) %>
+                <% unless production.release_type.blank? %>
                  <p style = "margin-bottom:0px"> <%= production.release_type %> </p>
                 <% end %>
                 <p style = "margin-bottom:0px"> Label: <%= production.label.title %> </p>
-                <% if production.date != ("" && nil) %>
+                <% unless production.date.blank? %>
                   <p > Date: <%= production.date %> </p>
                 <% end %>
-                <% if production.digital != ("" && nil) %>
-                  <%= link_to "> Digital", production.digital, target: :_blank %>
+                <% unless production.digital.blank? %>
+                  <%= link_to "> Digital", production.digital, target: :_blank, class:"digital_link"%>
                 <% end %>
-                <% if production.vinyl != ("" && nil) %>
-                  <%= link_to "> Vinyle", production.vinyl, target: :_blank, class:"vinyl_link" %>
+                <% unless production.vinyl.blank? %>
+                  <%= link_to "> Vinyle", production.vinyl, target: :_blank %>
                 <% end %>
               </div>
             </div>

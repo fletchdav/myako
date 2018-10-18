@@ -4,7 +4,7 @@
 }
 
 .left {
-  flex: 0 0 30%;
+  flex: 0 0 20%;
   height: 85vh;
   position: sticky;
   top: 15vh;
@@ -83,13 +83,16 @@
       text-decoration: none;
       color: $gray;
     }
+    &:focus {
+      text-decoration: none;
+    }
     &:hover {
     font-weight: bold;
     text-decoration: none;
     }
   }
-  .vinyl_link {
-    margin-left: 2em;
+  .digital_link {
+    margin-right: 2em;
   }
 }
 
