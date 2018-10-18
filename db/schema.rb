@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181018141015) do
+ActiveRecord::Schema.define(version: 20181018200911) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,12 +41,20 @@ ActiveRecord::Schema.define(version: 20181018141015) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "categorydinfos", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "position"
+  end
+
   create_table "infos", force: :cascade do |t|
-    t.string "category"
     t.text "detail"
     t.string "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "categorydinfo_id"
+    t.index ["categorydinfo_id"], name: "index_infos_on_categorydinfo_id"
   end
 
   create_table "labels", force: :cascade do |t|
@@ -121,6 +129,7 @@ ActiveRecord::Schema.define(version: 20181018141015) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "infos", "categorydinfos"
   add_foreign_key "productions", "labels"
   add_foreign_key "tracks", "productions"
 end
