@@ -1,62 +1,20 @@
 <div class="container">
-      <div class="info">
-        <div class="info-category">
-          <h5>CONTACT</h5>
-        </div>
-        <div class="info-details">
-          <% @contacts.each do |contact| %>
-            <p> <%= mail_to contact.link, contact.detail %> </p>
-          <% end %>
-        </div>
+  <% @categorydinfos.each do |categorydinfo| %>
+    <div class="info">
+      <div class="info-category">
+        <h5> <%= categorydinfo.title %> </h5>
       </div>
-      <div class="info">
-        <div class="info-category">
-          <h5>MUSIQUE</h5>
-        </div>
-        <div class="info-details">
-          <% @musiques.each do |musique| %>
-            <p> <%= link_to musique.detail.titleize, musique.link, target: :_blank %> </p>
+      <div class="info-details">
+        <% categorydinfo.infos.each do |info| %>
+          <% if info.categorydinfo == Categorydinfo.where(title: 'CONTACT').first %>
+            <p> <%= mail_to info.link, info.detail %> </p>
+          <% elsif info.categorydinfo == Categorydinfo.where(title: 'PAST GIGS').first %>
+            <p> <%= info.detail %> </p>
+          <% else %>
+            <p> <%= link_to info.detail.titleize, info.link, target: :_blank %>  </p>
           <% end %>
-        </div>
+        <% end %>
       </div>
-      <div class="info">
-        <div class="info-category">
-          <h5>COLLABORATIONS</h5>
-        </div>
-        <div class="info-details">
-          <% @collaborations.each do |collaboration| %>
-            <p> <%= link_to collaboration.detail.titleize, collaboration.link, target: :_blank %> </p>
-          <% end %>
-        </div>
-      </div>
-      <div class="info">
-        <div class="info-category">
-          <h5>RESEAUX</h5>
-        </div>
-        <div class="info-details">
-          <% @reseaux.each do |reseau| %>
-            <p> <%= link_to reseau.detail, reseau.link, target: :_blank %> </p>
-          <% end %>
-        </div>
-      </div>
-      <div class="info">
-        <div class="info-category">
-          <h5>PRESSE</h5>
-        </div>
-        <div class="info-details">
-          <% @presses.each do |presse| %>
-            <p> <%= link_to presse.detail, presse.link, target: :_blank %> </p>
-          <% end %>
-        </div>
-      </div>
-      <div class="info">
-        <div class="info-category">
-          <h5>PAST GIGS</h5>
-        </div>
-        <div class="info-details">
-          <% @gigs.each do |gig| %>
-            <p> <%= gig.detail %> </p>
-          <% end %>
-        </div>
-      </div>
+    </div>
+  <% end %>
 </div>
