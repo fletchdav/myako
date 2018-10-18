@@ -8,7 +8,10 @@ if (document.querySelector('.track')) {
   play();
 }
 
-
-
 import { mobilemenu } from '../components/mobilemenu';
 mobilemenu();
+
+import { scroll } from '../components/scroll';
+if (document.querySelector('a[href^="#"]')) {
+  scroll();
+}
