@@ -4,7 +4,7 @@ ActiveAdmin.register Info do
 #
 # permit_params :list, :of, :attributes, :on, :model
 #
-permit_params :detail, :link
+permit_params :detail, :link, :categorydinfo_id
 # or
 #
 # permit_params do
