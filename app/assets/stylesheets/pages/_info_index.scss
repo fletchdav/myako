@@ -1,0 +1,36 @@
+.info {
+  display: flex;
+  padding: 10px;
+  // border : solid 1px red;
+  // * {
+  //   border: solid 1px red;
+  // }
+}
+
+
+.info-category {
+  border-right: solid 1px black;
+  padding-right: 10px;
+  flex: 0 0 10%;
+    h5 {
+    margin-top: 0px;
+  }
+}
+
+
+.info-details {
+  padding-left: 10px;
+  a {
+    color: black;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  a:active {
+    text-decoration: none;
+    color: $gray;
+  }
+  a:focus {
+    text-decoration: none;
+  }
+}

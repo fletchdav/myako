@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :radios, only: :index
   resources :podcasts, only: :index
   resources :videos, only: :index
+  resources :infos, only: :index
 end

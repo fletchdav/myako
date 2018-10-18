@@ -1,0 +1,52 @@
+<div class="container">
+      <div class="info">
+        <div class="info-category">
+          <h5>CONTACT</h5>
+        </div>
+        <div class="info-details">
+          <% @contacts.each do |contact| %>
+            <p> <%= mail_to contact.link, contact.detail %> </p>
+          <% end %>
+        </div>
+      </div>
+      <div class="info">
+        <div class="info-category">
+          <h5>MUSIQUE</h5>
+        </div>
+        <div class="info-details">
+          <% @musiques.each do |musique| %>
+            <p> <%= link_to musique.detail.titleize, musique.link, target: :_blank %> </p>
+          <% end %>
+        </div>
+      </div>
+      <div class="info">
+        <div class="info-category">
+          <h5>RESEAUX</h5>
+        </div>
+        <div class="info-details">
+          <% @reseaux.each do |reseau| %>
+            <p> <%= link_to reseau.detail, reseau.link, target: :_blank %> </p>
+          <% end %>
+        </div>
+      </div>
+      <div class="info">
+        <div class="info-category">
+          <h5>PRESSE</h5>
+        </div>
+        <div class="info-details">
+          <% @presses.each do |presse| %>
+            <p> <%= link_to presse.detail, presse.link, target: :_blank %> </p>
+          <% end %>
+        </div>
+      </div>
+      <div class="info">
+        <div class="info-category">
+          <h5>PAST GIGS</h5>
+        </div>
+        <div class="info-details">
+          <% @gigs.each do |gig| %>
+            <p> <%= gig.detail %> </p>
+          <% end %>
+        </div>
+      </div>
+</div>
