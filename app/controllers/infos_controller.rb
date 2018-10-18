@@ -2,6 +2,7 @@ class InfosController < ApplicationController
   def index
     @infos = Info.all || []
     @contacts = Info.where(category: 'contact')
+    @collaborations = Info.where(category: 'collaboration')
     @musiques = Info.where(category: 'musique')
     @reseaux = Info.where(category: 'reseau')
     @presses = Info.where(category: 'presse')

@@ -21,6 +21,16 @@
       </div>
       <div class="info">
         <div class="info-category">
+          <h5>COLLABORATIONS</h5>
+        </div>
+        <div class="info-details">
+          <% @collaborations.each do |collaboration| %>
+            <p> <%= link_to collaboration.detail.titleize, collaboration.link, target: :_blank %> </p>
+          <% end %>
+        </div>
+      </div>
+      <div class="info">
+        <div class="info-category">
           <h5>RESEAUX</h5>
         </div>
         <div class="info-details">
