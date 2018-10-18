@@ -4,7 +4,7 @@
   <div class="left">
     <div class="labels_list">
       <% @labels.each do |label| %>
-        <li> <%= link_to label.title, "##{label.title.split.join}" %> </li>
+        <li data-label="<%=label.title.split.join %>"> <%= link_to label.title, "##{label.title.split.join}"%> </li>
       <% end %>
     </div>
       <div class="player_progress">
@@ -21,7 +21,7 @@
   <div class="right">
     <% @labels.each do |label| %>
       <div class="anchor" id="<%=label.title.split.join %>"></div>
-      <div class="label_content">
+      <div class="label_content" data-label="<%=label.title.split.join %>">
 
       <!-- détail par production -->
         <% label.productions.sort_by{ |prod|prod.position }.each do |production| %>
