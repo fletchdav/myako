@@ -11,7 +11,7 @@
 .info-category {
   border-right: solid 1px black;
   padding-right: 10px;
-  flex: 0 0 10%;
+  flex: 0 0 120px;
     h5 {
     margin-top: 0px;
   }
@@ -32,5 +32,14 @@
   }
   a:focus {
     text-decoration: none;
+  }
+}
+
+@media(max-width: 1000px) {
+  .info {
+    display: block;
+  }
+  .info-category {
+    border-right: none;
   }
 }
