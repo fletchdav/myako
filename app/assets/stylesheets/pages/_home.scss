@@ -1,7 +1,19 @@
 // Specific CSS for your home-page
 
-.gig {
+.home {
   display: flex;
+}
+
+.gig-mobile {
+  display:none;
+  padding: 10px;
+}
+
+.home-left {
+  flex: 0 0 40vw;
+}
+
+.gig {
   padding: 10px;
   // border : solid 1px red;
   // * {
@@ -11,19 +23,19 @@
 
 
 .gig-category {
-  border-right: solid 1px black;
-  padding-right: 10px;
+  border-bottom: solid 1px black;
   flex: 0 0 190px;
     h5 {
     margin-top: 0px;
   }
-  text-align: right;
+  text-align: left;
 }
 
 
 .gig-details {
   flex: 1 0 auto;
   padding-left: 10px;
+  padding-top: 10px;
   a {
     color: black;
   }
@@ -40,7 +52,6 @@
 }
 
 .insta {
-  display: flex;
   padding: 10px;
   // border : solid 1px red;
   // * {
@@ -50,19 +61,20 @@
 
 
 .insta-category {
-  border-right: solid 1px black;
+  border-bottom: solid 1px black;
   padding-right: 10px;
   flex: 0 0 190px;
     h5 {
     margin-top: 0px;
   }
-  text-align: right;
+  text-align: left;
 }
 
 
 .insta-details {
   flex: 1 1 calc(100vw-190px);
   padding-left: 10px;
+  padding-top: 10px;
   a {
     color: black;
   }
@@ -78,11 +90,57 @@
   }
 }
 
+.insta-photo {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color:white;
+  height: 20vw;
+  margin-bottom: 30px;
+}
+
+  @-webkit-keyframes argh-my-eyes {
+    0%   { background-color: #fff; }
+    49% { background-color: #fff; }
+    50% { background-color: #000; }
+    99% { background-color: #000; }
+    100% { background-color: #fff; }
+  }
+  @-moz-keyframes argh-my-eyes {
+    0%   { background-color: #fff; }
+    49% { background-color: #fff; }
+    50% { background-color: #000; }
+    99% { background-color: #000; }
+    100% { background-color: #fff; }
+  }
+  @keyframes argh-my-eyes {
+    0%   { background-color: #fff; }
+    49% { background-color: #fff; }
+    50% { background-color: #000; }
+    99% { background-color: #000; }
+    100% { background-color: #fff; }
+  }
+  .first_gig {
+  -webkit-animation: argh-my-eyes 1s infinite;
+  -moz-animation:    argh-my-eyes 1s infinite;
+  animation:         argh-my-eyes 1s infinite;
+}
+
 
 @media(max-width: 1000px) {
-  .gig, .insta {
+
+  .home {
     display: block;
   }
+
+  .gig {
+    display: none;
+  }
+
+  .gig-mobile, .insta {
+    display: block;
+  }
+
   .gig-category, .insta-category {
     border-right: none;
     text-align: left;

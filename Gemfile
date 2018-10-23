@@ -14,6 +14,7 @@ gem 'activeadmin'
 gem 'cancan'
 gem 'draper'
 gem 'pundit'
+gem 'instagram'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
