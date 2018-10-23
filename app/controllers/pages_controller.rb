@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     require 'json'
     require 'open-uri'
 
-    url = 'https://api.instagram.com/v1/users/self/media/recent/?access_token=192154330.54149b3.576a8210da384d2bb0a2471965dc7b47'
+    url = 'https://api.instagram.com/v1/users/self/media/recent/?access_token=1302285919.54149b3.67a325b2a4ee4145b5beefc519f1a915'
     response_serialized = open(url).read
     response = JSON.parse(response_serialized)
     @instagrams = []
