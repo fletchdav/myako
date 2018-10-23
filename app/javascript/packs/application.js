@@ -15,3 +15,9 @@ import { scroll } from '../components/scroll';
 if (document.querySelector('a[href^="#"]')) {
   scroll();
 }
+
+
+import { endBlink } from '../components/blink';
+if (document.querySelector('.gig-content')) {
+  endBlink();
+}

@@ -4,16 +4,15 @@
   display: flex;
 }
 
-.gig-mobile {
-  display:none;
-  padding: 10px;
-}
-
 .home-left {
-  flex: 0 0 40vw;
+  flex: 0 0 50vw;
 }
 
-.gig {
+.home-right {
+  padding-left: 50px;
+}
+
+.gig, .insta, .home-video, .home-production {
   padding: 10px;
   // border : solid 1px red;
   // * {
@@ -51,14 +50,14 @@
   }
 }
 
-.insta {
-  padding: 10px;
-  // border : solid 1px red;
-  // * {
-  //   border: solid 1px red;
-  // }
+.featured-production, .featured-video {
+  border-bottom: solid 1px black;
+  flex: 0 0 190px;
+    h5 {
+    margin-top: 0px;
+  }
+  text-align: left;
 }
-
 
 .insta-category {
   border-bottom: solid 1px black;
@@ -95,49 +94,87 @@
   background-repeat: no-repeat;
   background-position: center;
   color:white;
-  height: 20vw;
+  height: 250px;
   margin-bottom: 30px;
 }
 
   @-webkit-keyframes argh-my-eyes {
-    0%   { background-color: #fff; }
-    49% { background-color: #fff; }
-    50% { background-color: #000; }
-    99% { background-color: #000; }
-    100% { background-color: #fff; }
+    0%   {
+      background-color: #fff;
+      color: white;
+    }
+    49% {
+      background-color: #fff;
+      color: white;
+    }
+    50% {
+      background-color: #000;
+      color: white;
+    }
+    99% {
+      background-color: #000;
+      color: white; }
+    100% {
+      background-color: #fff;
+      color: white;}
   }
   @-moz-keyframes argh-my-eyes {
-    0%   { background-color: #fff; }
-    49% { background-color: #fff; }
-    50% { background-color: #000; }
-    99% { background-color: #000; }
-    100% { background-color: #fff; }
+    0%   {
+      background-color: #fff;
+      color: black;
+    }
+    49% {
+      background-color: #fff;
+      color: black;
+    }
+    50% {
+      background-color: #000;
+      color: white;
+    }
+    99% {
+      background-color: #000;
+      color: white; }
+    100% {
+      background-color: #fff;
+      color: black;}
   }
   @keyframes argh-my-eyes {
-    0%   { background-color: #fff; }
-    49% { background-color: #fff; }
-    50% { background-color: #000; }
-    99% { background-color: #000; }
-    100% { background-color: #fff; }
+      0%   {
+      background-color: #fff;
+      color: black;
+    }
+    49% {
+      background-color: #fff;
+      color: black;
+    }
+    50% {
+      background-color: #000;
+      color: white;
+    }
+    99% {
+      background-color: #000;
+      color: white; }
+    100% {
+      background-color: #fff;
+      color: black;}
   }
-  .first_gig {
-  -webkit-animation: argh-my-eyes 1s infinite;
-  -moz-animation:    argh-my-eyes 1s infinite;
-  animation:         argh-my-eyes 1s infinite;
+  .featured-gig {
+    -webkit-animation: argh-my-eyes 2s infinite;
+    -moz-animation:    argh-my-eyes 2s infinite;
+    animation:         argh-my-eyes 2s infinite;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 
-@media(max-width: 1000px) {
+@media(max-width: 992px) {
 
   .home {
     display: block;
   }
 
-  .gig {
-    display: none;
-  }
 
-  .gig-mobile, .insta {
+  .gig, .insta {
     display: block;
   }
 
