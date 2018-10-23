@@ -38,9 +38,25 @@
       </div>
     </div>
     <div class="home-video">
-    <div class="featured-video">
-      <h5>FEATURED VIDEO</h5>
+      <div class="featured-video">
+        <h5>FEATURED VIDEO</h5>
+      </div>
     </div>
+      <div class="insta-mobile">
+        <div class="insta-category">
+          <h5>SOCIAL NEWS</h5>
+        </div>
+      <div class="insta-details">
+        <div class="row">
+          <% @instagrams.each do |instagram| %>
+            <div class="col-sm-6">
+            <%= link_to 'https://www.instagram.com/myako_bluepanther/', target: :_blank do %>
+              <div class="insta-photo" style ="background-image:url(<%= instagram %>)"></div>
+            <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
