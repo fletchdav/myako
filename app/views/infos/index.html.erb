@@ -17,4 +17,14 @@
       </div>
     </div>
   <% end %>
+  <div class="info">
+    <div class="info-category">
+      <h5>PASSED GIGS</h5>
+    </div>
+    <div class="info-details">
+      <% @passed_gigs.each do |gig| %>
+        <p> <%= "#{gig.date.strftime("%d/%m/%Y")} #{gig.detail}" %> </p>
+      <% end %>
+    </div>
+  </div>
 </div>

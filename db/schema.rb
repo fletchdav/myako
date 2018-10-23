@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181018200911) do
+ActiveRecord::Schema.define(version: 20181023095637) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,12 +48,21 @@ ActiveRecord::Schema.define(version: 20181018200911) do
     t.integer "position"
   end
 
+  create_table "gigs", force: :cascade do |t|
+    t.string "detail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "passed"
+    t.date "date"
+  end
+
   create_table "infos", force: :cascade do |t|
     t.text "detail"
     t.string "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "categorydinfo_id"
+    t.string "date"
     t.index ["categorydinfo_id"], name: "index_infos_on_categorydinfo_id"
   end
 
