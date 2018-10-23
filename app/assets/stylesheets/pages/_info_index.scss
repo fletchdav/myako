@@ -20,6 +20,7 @@
 
 
 .info-details {
+  flex: 1 0 auto;
   padding-left: 10px;
   a {
     color: black;
@@ -42,5 +43,10 @@
   }
   .info-category {
     border-right: none;
+    text-align: left;
+    border-bottom: solid 1px black;
+  }
+  .info-details {
+    padding-top: 10px;
   }
 }

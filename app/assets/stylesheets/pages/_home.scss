@@ -1,1 +1,94 @@
 // Specific CSS for your home-page
+
+.gig {
+  display: flex;
+  padding: 10px;
+  // border : solid 1px red;
+  // * {
+  //   border: solid 1px red;
+  // }
+}
+
+
+.gig-category {
+  border-right: solid 1px black;
+  padding-right: 10px;
+  flex: 0 0 190px;
+    h5 {
+    margin-top: 0px;
+  }
+  text-align: right;
+}
+
+
+.gig-details {
+  flex: 1 0 auto;
+  padding-left: 10px;
+  a {
+    color: black;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  a:active {
+    text-decoration: none;
+    color: $gray;
+  }
+  a:focus {
+    text-decoration: none;
+  }
+}
+
+.insta {
+  display: flex;
+  padding: 10px;
+  // border : solid 1px red;
+  // * {
+  //   border: solid 1px red;
+  // }
+}
+
+
+.insta-category {
+  border-right: solid 1px black;
+  padding-right: 10px;
+  flex: 0 0 190px;
+    h5 {
+    margin-top: 0px;
+  }
+  text-align: right;
+}
+
+
+.insta-details {
+  flex: 1 1 calc(100vw-190px);
+  padding-left: 10px;
+  a {
+    color: black;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  a:active {
+    text-decoration: none;
+    color: $gray;
+  }
+  a:focus {
+    text-decoration: none;
+  }
+}
+
+
+@media(max-width: 1000px) {
+  .gig, .insta {
+    display: block;
+  }
+  .gig-category, .insta-category {
+    border-right: none;
+    text-align: left;
+    border-bottom: solid 1px black;
+  }
+  .gig-details, .insta-details {
+    padding-top: 10px;
+  }
+}
