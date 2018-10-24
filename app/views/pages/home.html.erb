@@ -1,5 +1,5 @@
-<div class="container-fluid home">
-  <div class="home-left">
+<div class="container home">
+
     <% if @coming_gigs.length > 0 %>
       <div class="gig">
         <div class="gig-category">
@@ -14,42 +14,25 @@
         </div>
       </div>
     <% end %>
-    <div class="insta">
-      <div class="insta-category">
-        <h5>SOCIAL NEWS</h5>
-      </div>
-      <div class="insta-details">
-        <div class="row">
-          <% @instagrams.each do |instagram| %>
-            <div class="col-sm-6">
-            <%= link_to 'https://www.instagram.com/myako_bluepanther/', target: :_blank do %>
-              <div class="insta-photo" style ="background-image:url(<%= instagram %>)"></div>
-            <% end %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="home-right">
+
     <div class="home-production">
       <div class="featured-production">
-        <h5>FEATURED PRODUCTION</h5>
+        <h5>LISTEN</h5>
+      </div>
+      <div class="featured-production-details">
+        <p><%= @featured_track.title %></p>
+        <input type="range" id="range"/>
       </div>
     </div>
-    <div class="home-video">
-      <div class="featured-video">
-        <h5>FEATURED VIDEO</h5>
+
+    <div class="insta">
+      <div class="insta-category">
+        <h5>GALLERY</h5>
       </div>
-    </div>
-      <div class="insta-mobile">
-        <div class="insta-category">
-          <h5>SOCIAL NEWS</h5>
-        </div>
       <div class="insta-details">
         <div class="row">
           <% @instagrams.each do |instagram| %>
-            <div class="col-sm-6">
+            <div class="col-md-3 col-sm-6 col-xs-12">
             <%= link_to 'https://www.instagram.com/myako_bluepanther/', target: :_blank do %>
               <div class="insta-photo" style ="background-image:url(<%= instagram %>)"></div>
             <% end %>
@@ -58,5 +41,5 @@
         </div>
       </div>
     </div>
-  </div>
+
 </div>
