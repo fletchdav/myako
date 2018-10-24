@@ -1,6 +1,6 @@
 
 function scroll() {
-  let navbarHeight = document.querySelector('.navbar-wagon').offsetHeight;
+  let navbarHeight = document.querySelector('.navbar').offsetHeight;
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();

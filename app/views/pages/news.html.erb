@@ -1,0 +1,58 @@
+<div class="container home">
+<!--   <div class="presentation">
+    <%= image_tag 'myako.jpg', height:"400px"%>
+    <div class="text">
+      <h5>MYAKO</h5>
+      <h5>MYAKO</h5>
+      <h5>MYAKO</h5>
+      <h5>MYAKO</h5>
+      <h5>MYAKO</h5>
+    </div>
+  </div> -->
+
+    <% if @coming_gigs.length > 0 %>
+      <div class="gig">
+        <div class="gig-category">
+          <h5> NEXT GIGS </h5>
+        </div>
+        <div class="gig-details">
+          <% @coming_gigs.each do |gig| %>
+            <div class="gig-content">
+              <p> <%= "#{gig.date.strftime("%d/%m/%Y")} #{gig.detail}" %> </p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
+    <% if @featured_track %>
+      <div class="home-production">
+        <div class="featured-production">
+          <h5>LAST PRODUCTION</h5>
+        </div>
+        <div class="featured-production-details">
+          <p><%= @featured_track.title %></p>
+          <audio class="audio" src=<%= @featured_track.url %>> </audio>
+          <input type="range" id="range"/>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="insta">
+      <div class="insta-category">
+        <h5>GALLERY</h5>
+      </div>
+      <div class="insta-details">
+        <div class="row">
+          <% @instagrams.each do |instagram| %>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+            <%= link_to 'https://www.instagram.com/myako_bluepanther/', target: :_blank do %>
+              <div class="insta-photo" style ="background-image:url(<%= instagram %>)"></div>
+            <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+</div>
