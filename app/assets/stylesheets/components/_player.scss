@@ -17,6 +17,7 @@
 }
 
 .player_progress {
+  display: none;
   background: black;
   flex: 1 1 20%;
   position: relative;
@@ -37,9 +38,11 @@
     margin-top: 0px;
     margin-bottom: 5px;
     height: 25px;
+    background: white;
   }
   .player_cursor {
     height: 25px;
+    background-color: black;
   }
 }
 
