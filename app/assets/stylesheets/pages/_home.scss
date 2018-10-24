@@ -64,7 +64,15 @@
     margin: 0px;
     padding-right: 30px;
   }
+  .playing {
+    font-weight: bold;
+  }
 }
+
+#range {
+  display: none;
+}
+
 
 .insta-category {
   border-bottom: solid 1px black;
