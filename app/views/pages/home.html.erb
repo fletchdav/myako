@@ -15,15 +15,18 @@
       </div>
     <% end %>
 
-    <div class="home-production">
-      <div class="featured-production">
-        <h5>LISTEN</h5>
+    <% if @featured_track %>
+      <div class="home-production">
+        <div class="featured-production">
+          <h5>LISTEN</h5>
+        </div>
+        <div class="featured-production-details">
+          <p><%= @featured_track.title %></p>
+          <audio class="audio" src=<%= @featured_track.url %>> </audio>
+          <input type="range" id="range"/>
+        </div>
       </div>
-      <div class="featured-production-details">
-        <p><%= @featured_track.title %></p>
-        <input type="range" id="range"/>
-      </div>
-    </div>
+    <% end %>
 
     <div class="insta">
       <div class="insta-category">

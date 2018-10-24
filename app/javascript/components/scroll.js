@@ -6,7 +6,6 @@ function scroll() {
         e.preventDefault();
         let target = document.querySelector(anchor.getAttribute('href'));
         let height = target.offsetTop;
-        console.log(height);
         window.scrollTo({
           top: height - navbarHeight,
           behavior: 'smooth'
@@ -15,7 +14,6 @@ function scroll() {
   });
 
   window.addEventListener('scroll', function (e) {
-    console.log(window.scrollY + navbarHeight);
     document.querySelectorAll('.label_content').forEach(label => {
       let labelTop = label.offsetTop;
       let labelBottom = label.offsetTop + label.offsetHeight;
