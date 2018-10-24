@@ -35,6 +35,7 @@ function updateButton() {
 }
 
 function toggleButton() {
+    playerCursor.style.background = "white";
     if  (document.querySelector('.running')) {
     audio = document.querySelector('.running');
     audio.pause();
@@ -54,7 +55,6 @@ function toggleButton() {
     audio.parentElement.classList.add('track_running');
     audio.parentElement.classList.add('playing');
     updateButton();
-    playerCursor.style.background = "white";
     audio.addEventListener('timeupdate', handleProgress);
   }
 }
