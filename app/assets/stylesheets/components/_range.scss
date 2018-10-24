@@ -1,0 +1,128 @@
+// from https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+
+// * * * COLORS * * *
+
+@font-size:      16px;    // <--- change the font size to change the size
+
+// dark version
+//@color__default: rgba(0,0,0,.2);
+//@color__hover:   rgba(0,0,0,.3);
+//@color__active:  rgba(0,0,0,.5);
+
+// light version
+@color__hover:   rgba(255,255,255,.7);
+@color__active:  rgba(255,255,255,1);
+
+
+input[type=range] {
+  box-sizing: border-box;
+  line-height: 1;
+  height: 2em;
+  background-color: transparent;
+  cursor: pointer;
+
+  // * * * RESET * * *
+
+  -webkit-appearance: none;
+  width: 100%;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  &:focus {
+    outline: none;
+  }
+  &::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  // * * * TRUMP * * *
+
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.5em;
+    border-radius: 1em;
+    border: 1px solid black;
+    cursor: pointer;
+    background: white;
+  }
+
+  &::-moz-range-thumb {
+    width: 2em;
+    height: 2em;
+    margin-top: 0;
+    border-radius: 1em;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+
+  &::-ms-thumb {
+    width: 2em;
+    height: 2em;
+    margin-top: 0;
+    border-radius: 1em;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+
+  &:hover{
+    &::-webkit-slider-thumb { border-color: black; }
+    &::-moz-range-thumb     { border-color: black; }
+    &::-ms-thumb            { border-color: black; }
+  }
+
+  //&:focus,
+  &:active{
+    &::-webkit-slider-thumb { border-color: black; }
+    &::-moz-range-thumb     { border-color: black; }
+    &::-ms-thumb            { border-color: black; }
+  }
+
+  // * * * TRACK * * *
+
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    cursor: pointer;
+    height: 1em;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+  }
+
+  &:focus::-webkit-slider-runnable-track {
+
+  }
+
+  &::-moz-range-track {
+    width: 100%;
+    cursor: pointer;
+    height: 1em;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+  }
+
+  &::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  &::-ms-fill-lower {
+
+  }
+  &:focus::-ms-fill-lower {
+
+  }
+  &::-ms-fill-upper {
+
+  }
+  &:focus::-ms-fill-upper {
+
+  }
+}

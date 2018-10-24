@@ -4,7 +4,7 @@ ActiveAdmin.register Track do
 #
 # permit_params :list, :of, :attributes, :on, :model
 #
-permit_params :title, :position, :min, :sec, :production_id, :url
+permit_params :title, :position, :min, :sec, :production_id, :url, :featured
 
 # or
 #

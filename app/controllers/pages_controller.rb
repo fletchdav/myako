@@ -3,6 +3,9 @@ class PagesController < ApplicationController
     refresh_gigs
     @coming_gigs = Gig.where(passed: 'false').sort_by { |gig| gig.date }
 
+    @featured_track = Track.where(featured:true).first
+    @featured_video = Video.where(featured:true).first
+
     require 'json'
     require 'open-uri'
 
