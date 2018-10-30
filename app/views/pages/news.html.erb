@@ -1,20 +1,19 @@
 <div class="container home">
     <div class="home-left">
+      <%= link_to 'https://www.instagram.com/myako_bluepanther/', target: :_blank do %>
       <div class="insta">
         <div class="insta-category">
           <h5>INSTA</h5>
         </div>
         <div class="insta-details">
-          <%= link_to 'https://www.instagram.com/myako_bluepanther/', target: :_blank do %>
-            <div class="insta-photo active" style ="background-image:url(<%= @instagrams.first %>)"></div>
+          <div class="insta-photo active" style ="background-image:url(<%= @instagrams.first %>)"></div>
+          <% @instagrams[1..-1].each do |instagram| %>
+            <div class="insta-photo" style ="background-image:url(<%= instagram %>)"></div>
           <% end %>
-            <% @instagrams[1..-1].each do |instagram| %>
-              <%= link_to 'https://www.instagram.com/myako_bluepanther/', target: :_blank do %>
-                <div class="insta-photo" style ="background-image:url(<%= instagram %>)"></div>
-              <% end %>
-            <% end %>
         </div>
       </div>
+      <% end %>
+
     </div>
 
    <div class="home-right">
