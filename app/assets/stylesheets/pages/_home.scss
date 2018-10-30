@@ -73,6 +73,7 @@
 
 .gig-content {
   max-width: 90vw;
+  margin-bottom: 1em;
 }
 
 .featured-production, .featured-video {
@@ -216,6 +217,13 @@
     animation:         argh-my-eyes 2s infinite;
     padding-left: 5px;
     padding-right: 5px;
+    a {
+      -webkit-animation: argh-my-eyes 2s infinite;
+      -moz-animation:    argh-my-eyes 2s infinite;
+      animation:         argh-my-eyes 2s infinite;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
 }
 
 .insta-mobile {

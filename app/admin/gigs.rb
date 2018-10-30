@@ -5,7 +5,7 @@ ActiveAdmin.register Gig do
 # permit_params :list, :of, :attributes, :on, :model
 #
 
-permit_params :date, :detail, :passed
+permit_params :date, :detail, :url, :passed
 
 # or
 #
