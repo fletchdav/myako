@@ -17,7 +17,7 @@
 .info-category {
   border-right: solid 1px black;
   padding-right: 10px;
-  flex: 0 0 190px;
+  flex: 0 0 300px;
     h5 {
     margin-top: 0px;
   }
@@ -26,7 +26,7 @@
 
 
 .info-details {
-  flex: 1 0 auto;
+  flex: 1 0 50vw;
   padding-left: 10px;
   a {
     color: black;
@@ -41,6 +41,14 @@
   a:focus {
     text-decoration: none;
   }
+}
+
+.info-details.bio {
+  text-align: justify;
+}
+
+.myako-photo {
+  width: 290px;
 }
 
 .gig-gradient {
@@ -60,7 +68,14 @@
     text-align: left;
     border-bottom: solid 1px black;
   }
+  .info-category.bio {
+    padding: 0px;
+    border-bottom: none;
+  }
   .info-details {
     padding-top: 10px;
+  }
+  .myako-photo {
+    width: 100%;
   }
 }

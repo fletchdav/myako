@@ -9,6 +9,23 @@
   padding: 40px;
 }
 
+.home {
+  display: flex;
+}
+
+.home-left {
+  flex: 0 0 30%;
+}
+
+.home-right {
+  flex: 0 0 70%;
+  position: sticky;
+  top: 15vh;
+  height: 85vh;
+  padding-left: 2vw;
+}
+
+
 .gig, .insta, .home-production {
   padding: 10px;
   // border : solid 1px red;
@@ -95,6 +112,7 @@
 
 
 .insta-details {
+  position: relative;
   flex: 1 1 calc(100vw-190px);
   padding-left: 10px;
   padding-top: 10px;
@@ -114,12 +132,19 @@
 }
 
 .insta-photo {
+  display: none;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color:white;
   min-height: 300px;
+  min-width: 300px;
   margin-bottom: 30px;
+  position: absolute;
+  top: 10px;
+  &.active {
+    display: block;
+  }
 }
 
   @-webkit-keyframes argh-my-eyes {
