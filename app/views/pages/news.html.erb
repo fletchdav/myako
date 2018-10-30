@@ -1,15 +1,23 @@
 <div class="container home">
-<!--   <div class="presentation">
-    <%= image_tag 'myako.jpg', height:"400px"%>
-    <div class="text">
-      <h5>MYAKO</h5>
-      <h5>MYAKO</h5>
-      <h5>MYAKO</h5>
-      <h5>MYAKO</h5>
-      <h5>MYAKO</h5>
+    <div class="home-left">
+      <div class="insta">
+        <div class="insta-category">
+          <h5>INSTA</h5>
+        </div>
+        <div class="insta-details">
+          <%= link_to 'https://www.instagram.com/myako_bluepanther/', target: :_blank do %>
+            <div class="insta-photo active" style ="background-image:url(<%= @instagrams.first %>)"></div>
+          <% end %>
+            <% @instagrams[1..-1].each do |instagram| %>
+              <%= link_to 'https://www.instagram.com/myako_bluepanther/', target: :_blank do %>
+                <div class="insta-photo" style ="background-image:url(<%= instagram %>)"></div>
+              <% end %>
+            <% end %>
+        </div>
+      </div>
     </div>
-  </div> -->
 
+   <div class="home-right">
     <% if @coming_gigs.length > 0 %>
       <div class="gig">
         <div class="gig-category">
@@ -38,21 +46,11 @@
       </div>
     <% end %>
 
-    <div class="insta">
-      <div class="insta-category">
-        <h5>GALLERY</h5>
-      </div>
-      <div class="insta-details">
-        <div class="row">
-          <% @instagrams.each do |instagram| %>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-            <%= link_to 'https://www.instagram.com/myako_bluepanther/', target: :_blank do %>
-              <div class="insta-photo" style ="background-image:url(<%= instagram %>)"></div>
-            <% end %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
+
+
+
+  </div>
+
+
 
 </div>

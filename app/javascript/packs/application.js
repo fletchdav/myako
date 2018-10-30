@@ -26,3 +26,9 @@ import { homePlayer } from '../components/home_player';
 if (document.querySelector('.featured-production-details')) {
   homePlayer();
 }
+
+import { instaBlink } from '../components/insta';
+if(document.querySelector('.insta')) {
+  instaBlink();
+}
+
