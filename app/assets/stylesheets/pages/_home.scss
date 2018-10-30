@@ -15,6 +15,13 @@
 
 .home-left {
   flex: 0 0 30%;
+  a {
+    color: black;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .home-right {
@@ -66,6 +73,7 @@
 
 .gig-content {
   max-width: 90vw;
+  margin-bottom: 1em;
 }
 
 .featured-production, .featured-video {
@@ -99,7 +107,6 @@
   display: none;
 }
 
-
 .insta-category {
   border-bottom: solid 1px black;
   padding-right: 10px;
@@ -112,7 +119,6 @@
 
 
 .insta-details {
-  position: relative;
   flex: 1 1 calc(100vw-190px);
   padding-left: 10px;
   padding-top: 10px;
@@ -140,8 +146,6 @@
   min-height: 300px;
   min-width: 300px;
   margin-bottom: 30px;
-  position: absolute;
-  top: 10px;
   &.active {
     display: block;
   }
@@ -213,6 +217,13 @@
     animation:         argh-my-eyes 2s infinite;
     padding-left: 5px;
     padding-right: 5px;
+    a {
+      -webkit-animation: argh-my-eyes 2s infinite;
+      -moz-animation:    argh-my-eyes 2s infinite;
+      animation:         argh-my-eyes 2s infinite;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
 }
 
 .insta-mobile {
@@ -220,8 +231,13 @@
 }
 
 @media(max-width: 992px) {
-
-
+  .home {
+    flex-direction: column-reverse;
+  }
+  .home-right {
+    height: auto;
+    position:initial;
+  }
   .gig-category, .insta-category {
     text-align: left;
   }
@@ -229,7 +245,6 @@
     padding-top: 10px;
     width: 100%;
   }
-
   .home-right {
     padding-left: 0px;
   }
