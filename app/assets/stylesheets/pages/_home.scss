@@ -74,6 +74,11 @@
 .gig-content {
   max-width: 90vw;
   margin-bottom: 1em;
+  padding: 2px 0px;
+  p, a {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
 }
 
 .featured-production, .featured-video {
