@@ -59,7 +59,7 @@ function toggleButton() {
   }
 }
 
-const toggle = () => {
+const toggle = (event) => {
   playerCursor.style.background = "white";
   controls.style.display = "flex";
   audio = event.currentTarget.querySelector('.audio')
