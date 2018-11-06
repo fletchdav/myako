@@ -123,6 +123,7 @@
 
 
 .insta-details {
+  position: relative;
   flex: 1 1 calc(100vw-190px);
   padding-left: 10px;
   padding-top: 10px;
@@ -142,91 +143,101 @@
 }
 
 .insta-photo {
-  display: none;
+  position: absolute;
+  top: 10px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color:white;
   min-height: 300px;
+  min-width: calc(100% - 10px);
   margin-bottom: 30px;
   &.active {
-    display: block;
+    z-index: 4;
   }
 }
 
-  @-webkit-keyframes argh-my-eyes {
-    0%   {
-      background-color: #fff;
-      color: white;
-    }
-    49% {
-      background-color: #fff;
-      color: white;
-    }
-    50% {
-      background-color: #000;
-      color: white;
-    }
-    99% {
-      background-color: #000;
-      color: white; }
-    100% {
-      background-color: #fff;
-      color: white;}
-  }
-  @-moz-keyframes argh-my-eyes {
-    0%   {
-      background-color: #fff;
-      color: black;
-    }
-    49% {
-      background-color: #fff;
-      color: black;
-    }
-    50% {
-      background-color: #000;
-      color: white;
-    }
-    99% {
-      background-color: #000;
-      color: white; }
-    100% {
-      background-color: #fff;
-      color: black;}
-  }
-  @keyframes argh-my-eyes {
-      0%   {
-      background-color: #fff;
-      color: black;
-    }
-    49% {
-      background-color: #fff;
-      color: black;
-    }
-    50% {
-      background-color: #000;
-      color: white;
-    }
-    99% {
-      background-color: #000;
-      color: white; }
-    100% {
-      background-color: #fff;
-      color: black;}
-  }
-  .featured-gig {
-    -webkit-animation: argh-my-eyes 2s infinite;
-    -moz-animation:    argh-my-eyes 2s infinite;
-    animation:         argh-my-eyes 2s infinite;
-    padding-left: 5px;
-    padding-right: 5px;
-    a {
-      -webkit-animation: argh-my-eyes 2s infinite;
-      -moz-animation:    argh-my-eyes 2s infinite;
-      animation:         argh-my-eyes 2s infinite;
-      padding-left: 5px;
-      padding-right: 5px;
-    }
+//   @-webkit-keyframes argh-my-eyes {
+//     0%   {
+//       background-color: #fff;
+//       color: white;
+//     }
+//     49% {
+//       background-color: #fff;
+//       color: white;
+//     }
+//     50% {
+//       background-color: #000;
+//       color: white;
+//     }
+//     99% {
+//       background-color: #000;
+//       color: white; }
+//     100% {
+//       background-color: #fff;
+//       color: white;}
+//   }
+//   @-moz-keyframes argh-my-eyes {
+//     0%   {
+//       background-color: #fff;
+//       color: black;
+//     }
+//     49% {
+//       background-color: #fff;
+//       color: black;
+//     }
+//     50% {
+//       background-color: #000;
+//       color: white;
+//     }
+//     99% {
+//       background-color: #000;
+//       color: white; }
+//     100% {
+//       background-color: #fff;
+//       color: black;}
+//   }
+//   @keyframes argh-my-eyes {
+//       0%   {
+//       background-color: #fff;
+//       color: black;
+//     }
+//     49% {
+//       background-color: #fff;
+//       color: black;
+//     }
+//     50% {
+//       background-color: #000;
+//       color: white;
+//     }
+//     99% {
+//       background-color: #000;
+//       color: white; }
+//     100% {
+//       background-color: #fff;
+//       color: black;}
+//   }
+//   .featured-gig {
+//     -webkit-animation: argh-my-eyes 2s infinite;
+//     -moz-animation:    argh-my-eyes 2s infinite;
+//     animation:         argh-my-eyes 2s infinite;
+//     padding-left: 5px;
+//     padding-right: 5px;
+//     a {
+//       -webkit-animation: argh-my-eyes 2s infinite;
+//       -moz-animation:    argh-my-eyes 2s infinite;
+//       animation:         argh-my-eyes 2s infinite;
+//       padding-left: 5px;
+//       padding-right: 5px;
+//     }
+// }
+
+
+.gig-content.active {
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: black;
+  color: white;
 }
 
 .insta-mobile {

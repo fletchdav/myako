@@ -4,8 +4,7 @@ const instaPhotos = [];
 document.querySelectorAll('.insta-photo').forEach(photo => instaPhotos.push(photo));
 const length = instaPhotos.length;
 
-
-function classChange () {
+function imageClassChange () {
   instaPhotos[i].classList.add('active');
   if (i > 0 && i < length - 1) {
     instaPhotos[i - 1].classList.remove('active');
@@ -19,8 +18,19 @@ function classChange () {
   }
 }
 
+function gigClassChange () {
+  if (document.querySelector('.activeable')) {
+    const featuredGig = document.querySelector('.activeable');
+    featuredGig.classList.toggle('active');
+  }
+}
+
+
 function instaBlink() {
-  intervalID = setInterval(classChange, 1000);
+  intervalID = setInterval(function () {
+    imageClassChange();
+    gigClassChange();
+  }, 1000);
 }
 
 export { instaBlink }

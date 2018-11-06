@@ -17,7 +17,7 @@ if (document.querySelector('a[href^="#"]')) {
 }
 
 
-import { endBlink } from '../components/blink';
+import { endBlink } from '../components/endblink';
 if (document.querySelector('.gig-content')) {
   endBlink();
 }
