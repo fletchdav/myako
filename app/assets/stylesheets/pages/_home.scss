@@ -1,4 +1,59 @@
-// Specific CSS for your home-page
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 250px 0px;
+}
+
+.menu-vertical-item {
+writing-mode: vertical-rl;
+text-orientation: upright;
+margin: 0 12.5px;
+  a {
+      color: black;
+    }
+  a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    }
+  a:active {
+    text-decoration: none;
+    color: $gray;
+    }
+  a:focus {
+    text-decoration: none;
+    }
+}
+
+
+.menu-with-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 250px 0px;
+}
+
+.menu-center {
+  text-align: center;
+  a {
+      color: black;
+  }
+  a:hover {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a:active {
+    text-decoration: none;
+    color: $gray;
+  }
+  a:focus {
+    text-decoration: none;
+  }
+}
+
+
+// ancienne home
 
 .presentation {
   display: flex;
