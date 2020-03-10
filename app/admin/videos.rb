@@ -6,7 +6,7 @@ ActiveAdmin.register Video do
 #
 # or
 
-permit_params :title, :url, :text, :featured
+permit_params :title, :url, :text, :introduction
 #
 # permit_params do
 #   permitted = [:permitted, :attributes]
