@@ -1,3 +1,20 @@
+  p {
+    a {
+      color: black;
+    }
+  a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    }
+  a:active {
+    text-decoration: none;
+    color: $gray;
+    }
+  a:focus {
+    text-decoration: none;
+    }
+}
 
 .menu {
   display: flex;
@@ -52,6 +69,20 @@ margin: 0 12.5px;
   }
 }
 
+
+.photomenu {
+  position: relative;
+}
+
+.menuinphoto {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 // ancienne home
 
