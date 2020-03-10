@@ -4,7 +4,7 @@ ActiveAdmin.register Radio do
 #
 # permit_params :list, :of, :attributes, :on, :model
 #
-permit_params :title, :url, :text
+permit_params :title, :url, :text, :introduction
 # or
 #
 # permit_params do

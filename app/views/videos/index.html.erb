@@ -1,9 +1,14 @@
 <div class="container">
   <div class="col-md-10 col-md-offset-1">
-    <% @videos.each do |video| %>
+    <% unless @videos.where(introduction:true).first.nil?  %>
+      <div class="video-title"> <h5> <%= @videos.where(introduction:true).first.title.upcase %> </h5></div>
+      <div class="video-text"> <h5> <%= simple_format(@videos.where(introduction:true).first.text.upcase) %></h5></div>
+    <% end %>
+
+    <% @videos.where(introduction:false).each do |video| %>
         <div class="media">
-          <div class="video-title"> <h5> <%= video.title.upcase %> </h5></div>
-          <div class="video-text"> <h5> <%= simple_format(video.text.upcase) %></div> </h5>
+          <div class="video-title"> <h5> <%= video.title.upcase if video.title.present? %> </h5></div>
+          <div class="video-text"> <h5> <%= simple_format(video.text.upcase) if video.text.present? %></div> </h5>
           <div class="video-container">
             <%= video.url.html_safe %>
          </div>
