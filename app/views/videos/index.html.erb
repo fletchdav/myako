@@ -1,7 +1,6 @@
 <div class="container">
-  <div class="row">
+  <div class="col-md-10 col-md-offset-1">
     <% @videos.each do |video| %>
-      <div class="col-md-12">
         <div class="media">
           <div class="video-title"> <h5> <%= video.title.upcase %> </h5></div>
           <div class="video-text"><%= simple_format(video.text) %></div>
@@ -9,7 +8,6 @@
             <%= video.url.html_safe %>
          </div>
         </div>
-      </div>
     <% end %>
   </div>
 </div>

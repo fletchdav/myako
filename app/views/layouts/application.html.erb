@@ -30,7 +30,9 @@
 
   </head>
   <body>
+    <% unless home? %>
     <%= render 'shared/navbar' %>
+    <% end %>
     <%= render 'shared/flashes' %>
     <%= render 'shared/mobile-menu' %>
     <%= yield %>

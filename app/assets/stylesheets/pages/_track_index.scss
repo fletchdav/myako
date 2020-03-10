@@ -4,18 +4,17 @@
 }
 
 .left {
-  flex: 0 0 20%;
+  flex: 0 0 auto;
   height: 85vh;
   position: sticky;
   top: 15vh;
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
+  padding: 0px 20px;
 }
 
 .right {
-  // padding: 20px;
-  margin-left: 20px;
+  padding: 0px 20px;
   p, a {
   }
 }
@@ -68,13 +67,12 @@
 
 .production_content {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 10vh;
 }
 
 .production_title {
   h5 {
     margin-top: 0px;
-    font-size: 18px;
   }
 }
 
@@ -88,7 +86,7 @@
   font-weight: lighter;
   padding-top: 10px;
   text-align: justify;
-  border-top: 1px solid black;
+  // border-top: 1px solid black;
   a {
     color: $gray;
     &:active {
